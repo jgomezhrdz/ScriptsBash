@@ -6,7 +6,7 @@ extension="${argumento##*.}"
 
 #Comprobar si existe el archivo
 if [[ -f $argumento ]]; then
-    if [[ "$extension" == "jpg" || "$extension" == "jpeg" ]]; then
+    if [[ "$extension" == "jpg" ]]; then
         #Crear el directorio si no existe
         if [[ ! -d "~/fotos/" ]]; then
            sudo mkdir ~/fotos/
