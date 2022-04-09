@@ -2,10 +2,11 @@
 
 argumento=$1
 nombreArchivo="${argumento%.*}"
+extension="${argumento##*.}"
 
 #Comprobar si existe el archivo
 if [[ -f $argumento ]]; then
-    if [[ $argumento ~= /*.txt ]]; then
+    if [[ "$extension" == "jpg" ]]; then
         #Crear el directorio si no existe
         if [[ ! -d "~/fotos/" ]]; then
            sudo mkdir ~/fotos/
